@@ -1,119 +1,148 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minggo-Commits</title>
-  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- AOS Animation -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/style.css">
-  <style>
-    body {
-      transition: background 0.4s ease, color 0.4s ease;
-    }
-    .dark-mode {
-      background-color: #121212 !important;
-      color: #e0e0e0 !important;
-    }
-    .dark-mode .navbar {
-      background-color: #1f1f1f !important;
-    }
-    .dark-mode footer {
-      background-color: #1f1f1f !important;
-    }
-    .dark-mode .btn-light {
-      background: #333 !important;
-      color: #fff !important;
-    }
-    .dark-mode .bg-light {
-      background-color: #1e1e1e !important;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="light-mode">
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">ML Portfolio</div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">Portofolio ML</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="projects.html">Proyek</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
-        </ul>
-        <button class="btn btn-outline-light ms-lg-3" id="darkModeToggle">🌙</button>
-      </div>
-    </div>
-  </nav>
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Machine Learning & AI Solutions</h1>
+                <p class="hero-subtitle">
+                    Membangun masa depan dengan algoritma yang cerdas dan solusi inovatif
+                </p>
+                <a href="#projects" class="cta-button">Lihat Project</a>
+            </div>
+        </div>
+    </section>
 
-  <!-- Hero Section -->
-  <section class="hero d-flex align-items-center text-center" 
-           style="height:100vh; background: linear-gradient(135deg,#4e73df,#1cc88a); color:white;">
-    <div class="container" data-aos="fade-up">
-      <img src="assets/img/profile.jpg" class="rounded-circle mb-3 shadow" width="140" alt="Foto Profil">
-      <h1 class="fw-bold">Halo, Saya [Nama Kamu]</h1>
-      <p class="lead">Machine Learning Enthusiast | Data Science Developer</p>
-      <a href="projects.html" class="btn btn-light btn-lg mt-3 shadow-sm">Lihat Proyek</a>
-    </div>
-  </section>
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Tentang Saya</h2>
+            <div class="about-content">
+                <p>
+                    Saya adalah seorang Machine Learning Engineer yang passionate dalam mengembangkan 
+                    solusi AI yang dapat menyelesaikan masalah kompleks dalam kehidupan sehari-hari. 
+                    Dengan pengalaman dalam berbagai projek machine learning, saya fokus pada 
+                    pembuatan model yang akurat, efisien, dan mudah diimplementasikan.
+                </p>
+            </div>
+        </div>
+    </section>
 
-  <!-- About Section -->
-  <section id="about" class="py-5 bg-light">
-    <div class="container" data-aos="fade-up">
-      <h2 class="text-center mb-4">Tentang Saya</h2>
-      <p class="text-center mx-auto" style="max-width: 700px;">
-        Saya seorang pengembang dengan minat besar di bidang Machine Learning, Data Science, dan Artificial Intelligence.
-        Portofolio ini menampilkan beberapa proyek yang saya kerjakan, mulai dari sistem prediksi, klasifikasi,
-        hingga aplikasi berbasis deep learning. Saya senang membagikan pengetahuan dan berkolaborasi dalam proyek teknologi.
-      </p>
-    </div>
-  </section>
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Project Machine Learning</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://placeholder-image-service.onrender.com/image/400x300?prompt=Machine%20learning%20model%20visualization%20with%20neural%20networks%20and%20data%20points&id=project-1" alt="Visualisasi model machine learning dengan jaringan neural dan titik data">
+                    </div>
+                    <div class="project-content">
+                        <h3>Image Classification</h3>
+                        <p>Sistem klasifikasi gambar menggunakan CNN dengan akurasi 95% pada dataset custom</p>
+                    </div>
+                </div>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-5">
-    <div class="container" data-aos="fade-up">
-      <h2 class="text-center mb-4">Kontak</h2>
-      <p class="text-center">Ingin berkolaborasi atau berdiskusi? Silakan hubungi saya:</p>
-      <div class="text-center">
-        <a href="mailto:arsan05062003@gmail.com" class="btn btn-primary">📧 Email Saya</a>
-        <a href="https://github.com/minggo-commits" class="btn btn-dark" target="_blank">🐙 GitHub</a>
-        <a href="https://linkedin.com/in/username" class="btn btn-info text-white" target="_blank">🔗 LinkedIn</a>
-      </div>
-    </div>
-  </section>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://placeholder-image-service.onrender.com/image/400x300?prompt=Natural%20language%20processing%20text%20analysis%20with%20word%20clouds&id=project-2" alt="Analisis teks natural language processing dengan word cloud">
+                    </div>
+                    <div class="project-content">
+                        <h3>Sentiment Analysis</h3>
+                        <p>Analisis sentiment untuk review produk menggunakan NLP dan LSTM networks</p>
+                    </div>
+                </div>
 
-  <!-- Footer -->
-  <footer class="text-center py-4 bg-dark text-white">
-    <p class="mb-0">© 2025 Dibuat oleh Muh Arsan Akbar AKA Minggo-Commits | 
-      <a href="mailto:arsan05062003@gmail.com" class="text-white">Hubungi Saya</a></p>
-  </footer>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://placeholder-image-service.onrender.com/image/400x300?prompt=Predictive%20analytics%20dashboard%20with%20charts%20and%20graphs&id=project-3" alt="Dashboard analitik prediktif dengan grafik dan chart">
+                    </div>
+                    <div class="project-content">
+                        <h3>Predictive Analytics</h3>
+                        <p>Model prediksi untuk forecasting time series data dengan regression algorithms</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="js/main.js"></script>
-  <script>
-    AOS.init();
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Teknologi & Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <h4>Python</h4>
+                    <p>Data analysis, ML libraries, and backend development</p>
+                </div>
+                <div class="skill-item">
+                    <h4>TensorFlow & PyTorch</h4>
+                    <p>Deep learning frameworks for model development</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Data Visualization</h4>
+                    <p>Matplotlib, Seaborn, and interactive dashboards</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Cloud Platforms</h4>
+                    <p>AWS, GCP, and Azure for ML deployment</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    // Dark Mode Toggle
-    const toggleBtn = document.getElementById('darkModeToggle');
-    toggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      if (document.body.classList.contains('dark-mode')) {
-        toggleBtn.textContent = "☀️";
-      } else {
-        toggleBtn.textContent = "🌙";
-      }
-    });
-  </script>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Hubungi Saya</h2>
+            <div class="contact-content">
+                <p>Tertarik untuk berkolaborasi atau memiliki pertanyaan tentang project machine learning?</p>
+                <div class="social-links">
+                    <a href="https://github.com" class="social-link">GitHub</a>
+                    <a href="https://linkedin.com" class="social-link">LinkedIn</a>
+                    <a href="mailto:email@example.com" class="social-link">Email</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Machine Learning Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
