@@ -1,1 +1,1 @@
-{"config":{"lang":["en"],"separator":"[\\s\\-]+","pipeline":["stopWordFilter"]},"docs":[{"location":"projects/","title":"\ud83d\udcbc My Projects","text":""},{"location":"projects/#minggo-commitsgithubio","title":"minggo-commits.github.io","text":"<p>Atau tambahkan daftar proyekmu di sini: - Gamble Comment Detector - Lontara Character Recognition</p>"}]}
+{"config":{"lang":["en"],"separator":"[\\s\\-]+","pipeline":["stopWordFilter"]},"docs":[{"location":"projects/","title":"\ud83d\udcbc My Projects","text":"<p>{! includes/gamble-comment-detector.md !}</p>"}]}
