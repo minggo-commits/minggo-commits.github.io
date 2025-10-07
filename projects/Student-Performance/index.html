@@ -1,0 +1,1207 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Gamble-comment-detector/">
+      
+      
+        <link rel="next" href="../Book-recommendation/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
+    
+    
+      
+        <title>Student Performance Prediction - Minggo-Commits</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2a3383ac.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#laporan-proyek-machine-learning-muh-arsan-akbar" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Minggo-Commits" class="md-header__button md-logo" aria-label="Minggo-Commits" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Minggo-Commits
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Student Performance Prediction
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Minggo-Commits" class="md-nav__button md-logo" aria-label="Minggo-Commits" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Minggo-Commits
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Projects
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Gamble-comment-detector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gamble Comment Detector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Student Performance Prediction
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Student Performance Prediction
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#domain-proyek" class="md-nav__link">
+    <span class="md-ellipsis">
+      Domain Proyek
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-understanding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Business Understanding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Business Understanding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-statements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problem Statements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Goals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solution-statements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solution statements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-understanding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Understanding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Understanding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exploratory-data-analysis-univariate-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exploratory data analysis - Univariate Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fitur-fitur-kategori" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fitur-fitur Kategori
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distribusi-gender" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distribusi Gender
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distribusi-raceethnicity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distribusi Race/Ethnicity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distribusi-parental-level-of-education" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distribusi Parental Level of Education
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distribusi-lunch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distribusi Lunch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distribusi-test-preparation-course" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distribusi Test Preparation Course
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fitur-fitur-numerikal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fitur-fitur Numerikal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exploratory-data-analysis-multivariate-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exploratory data analysis - Multivariate Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fitur-fitur-kategorical-terhadap-target" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fitur-fitur Kategorical Terhadap Target
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fitur-fitur-numerical-terhadap-target" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fitur-fitur Numerical Terhadap Target
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Preparation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modeling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Book-recommendation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Book Recommendation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#domain-proyek" class="md-nav__link">
+    <span class="md-ellipsis">
+      Domain Proyek
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-understanding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Business Understanding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Business Understanding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-statements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problem Statements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Goals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solution-statements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solution statements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-understanding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Understanding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Understanding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exploratory-data-analysis-univariate-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exploratory data analysis - Univariate Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fitur-fitur-kategori" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fitur-fitur Kategori
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distribusi-gender" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distribusi Gender
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distribusi-raceethnicity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distribusi Race/Ethnicity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distribusi-parental-level-of-education" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distribusi Parental Level of Education
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distribusi-lunch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distribusi Lunch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distribusi-test-preparation-course" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distribusi Test Preparation Course
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fitur-fitur-numerikal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fitur-fitur Numerikal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exploratory-data-analysis-multivariate-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exploratory data analysis - Multivariate Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fitur-fitur-kategorical-terhadap-target" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fitur-fitur Kategorical Terhadap Target
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fitur-fitur-numerical-terhadap-target" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fitur-fitur Numerical Terhadap Target
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Preparation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modeling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="laporan-proyek-machine-learning-muh-arsan-akbar">Laporan Proyek Machine Learning - Muh. Arsan Akbar</h1>
+<h2 id="domain-proyek">Domain Proyek</h2>
+<p>Pendidikan merupakan fondasi utama dalam membentuk sumber daya manusia yang kompeten dan berdaya saing tinggi, terutama dalam menghadapi tantangan globalisasi dan kemajuan teknologi. Kualitas pendidikan yang baik menjadi kunci dalam mencetak individu yang produktif dan mampu memberikan kontribusi positif terhadap masyarakat. Namun demikian, sistem pendidikan di berbagai negara, termasuk Indonesia, masih menghadapi tantangan besar, khususnya terkait dengan tingginya angka putus sekolah dan rendahnya tingkat retensi siswa (Tjandra et al., 2022). Permasalahan ini tidak hanya menghambat perkembangan sektor pendidikan, tetapi juga berdampak jangka panjang terhadap masa depan generasi muda.</p>
+<p>Salah satu penyebab utama dari tingginya angka putus sekolah adalah rendahnya kinerja akademik siswa. Ketika siswa mengalami kesulitan dalam memahami materi pelajaran dan tidak mencapai hasil belajar yang memadai, mereka lebih rentan untuk kehilangan motivasi dan akhirnya memilih keluar dari sistem pendidikan formal (Gusnina et al., 2022). Dalam konteks ini, diperlukan strategi preventif yang tepat untuk mengidentifikasi siswa yang berisiko dan memberikan intervensi secara dini (Ismanto et al., 2022).</p>
+<p>Penerapan teknologi seperti machine learning dalam dunia pendidikan memberikan peluang besar untuk mengatasi permasalahan tersebut. Salah satunya adalah dengan membangun sistem prediksi kinerja akademik siswa berdasarkan data historis dan karakteristik individual. Kinerja akademik sendiri merupakan indikator yang mencerminkan sejauh mana siswa berhasil mencapai tujuan pembelajaran dalam bidang tertentu. Dengan melakukan prediksi terhadap performa akademik, pendidik dapat memberikan bimbingan, sumber daya tambahan, serta intervensi yang disesuaikan dengan kebutuhan masing-masing siswa (Masangu et al., 2020).</p>
+<p>Lebih jauh lagi, kinerja akademik yang baik tidak hanya menentukan kesuksesan siswa di lingkungan sekolah, tetapi juga menjadi faktor penting dalam kesiapan memasuki dunia kerja. Siswa yang unggul secara akademik umumnya memiliki peluang yang lebih besar untuk memperoleh pekerjaan berkualitas dan memiliki jenjang karier yang lebih baik (Adane et al., 2023). Oleh karena itu, meningkatkan kinerja akademik siswa memiliki dampak luas, baik dari sisi pendidikan maupun kehidupan profesional mereka setelah lulus.</p>
+<p>Berdasarkan urgensi tersebut, proyek ini akan mengembangkan sistem prediksi kinerja akademik siswa menggunakan pendekatan machine learning, dengan memanfaatkan fitur-fitur seperti skor matematika, membaca, menulis, serta variabel sosiodemografis seperti gender, etnis, dan latar belakang pendidikan orang tua. Melalui pendekatan ini, diharapkan sekolah dan lembaga pendidikan dapat secara proaktif mendeteksi potensi permasalahan akademik dan menyediakan solusi berbasis data yang lebih efektif.</p>
+<p>Referensi:</p>
+<p><a href="https://doi.org/10.1063/5.0080187">Tjandra, E., Kusumawardani, S. S., &amp; Ferdiana, R. (2022). Student performance prediction in higher education: A comprehensive review. AIP Conference Proceedings. https://doi.org/10.1063/5.0080187</a></p>
+<p><a href="https://doi.org/10.18280/isi.270317">Gusnina, M., Wiharto, N., &amp; Salamah, U. (2022). Student performance prediction in Sebelas Maret University based on the Random Forest algorithm. Ingénierie Des Systèmes D Information, 27(3), 495–501. https://doi.org/10.18280/isi.270317</a></p>
+<p><a href="http://doi.org/10.12928/telkomnika.v20i3.21963">Ismanto, E., Ghani, H. A., Saleh, N. I. M., Amien, J. A., &amp; Gunawan, R. (2022). Recent systematic review on student performance prediction using backpropagation algorithms. TELKOMNIKA (Telecommunication Computing Electronics and Control), 20(3), 597. https://doi.org/10.12928/telkomnika.v20i3.21963</a></p>
+<p><a href="https://doi.org/10.9734/jamcs/2023/v38i51762">Adane, M. D., Deku, J. K., &amp; Asare, E. K. (2023). Performance analysis of machine learning algorithms in prediction of student academic performance. Journal of Advances in Mathematics and Computer Science, 38(5), 74–86. https://doi.org/10.9734/jamcs/2023/v38i51762</a></p>
+<h2 id="business-understanding">Business Understanding</h2>
+<p>Pendidikan adalah pilar utama pembangunan sumber daya manusia. Namun, tantangan serius masih dihadapi, terutama terkait dengan rendahnya kinerja akademik siswa yang dapat memicu putus sekolah. Oleh karena itu, pemanfaatan pendekatan prediktif berbasis machine learning dalam dunia pendidikan menjadi langkah yang strategis untuk mendeteksi potensi permasalahan akademik sejak dini.</p>
+<h3 id="problem-statements">Problem Statements</h3>
+<ul>
+<li>Bagaimana memprediksi kinerja akademik siswa secara akurat berdasarkan data karakteristik tertentu?</li>
+<li>Fitur apa saja yang paling signifikan dan berpengaruh dalam menentukan performa akademik siswa?</li>
+</ul>
+<h3 id="goals">Goals</h3>
+<ul>
+<li>Membangun model prediksi machine learning yang mampu memperkirakan kinerja akademik siswa secara akurat berdasarkan fitur-fitur yang tersedia.</li>
+<li>Mengidentifikasi fitur-fitur yang paling berkorelasi dan berkontribusi signifikan terhadap keberhasilan akademik siswa.</li>
+</ul>
+<h3 id="solution-statements">Solution statements</h3>
+<ul>
+<li>Menerapkan algoritma KNeighborsRegressor, RandomForestRegressor dan AdaBoostRegressor untuk membuat model prediksi performa siswa</li>
+<li>Membuat fitur baru dari fitur yang ada (feature engineering), yaitu menggabungkan skor rata-rata dari tiga indikator penilaian utama untuk membentuk sebuah label yang baru. Fitur tersebut nantinya akan digunakan sebagai acuan untuk menilai fitur yang paling signifikan terhadap keberhasilan siswa.</li>
+<li>Menghitung Mean Squared Error masing-masing algoritma pada data train dan test untuk mencari model yang terbaik</li>
+</ul>
+<h2 id="data-understanding">Data Understanding</h2>
+<p>Dataset yang digunakan dalam proyek ini adalah Student Performance Prediction Dataset yang bersumber dari platform <a href="https://www.kaggle.com/datasets/rkiattisak/student-performance-in-mathematics/data">Kaggle</a>.</p>
+<p><strong>Jumlah Data:</strong> Dataset ini terdiri dari 1000 baris (sampel siswa) dan 8 kolom (fitur).</p>
+<p><strong>Kondisi Data:</strong> Berdasarkan analisis awal, dataset ini memiliki kondisi sebagai berikut:
+- <strong>Missing Value:</strong> Tidak terdapat nilai yang hilang (<em>missing value</em>) dalam dataset.
+- <strong>Outlier:</strong> Berdasarkan visualisasi distribusi fitur numerik, tidak terdeteksi adanya <em>outlier</em> ekstrem yang secara signifikan dapat mengganggu analisis atau pemodelan. Beberapa nilai ekstrem rendah pada skor matematika mungkin ada, namun dianggap sebagai variasi alami dalam performa siswa.</p>
+<p><strong>Tautan Sumber Data:</strong> <a href="https://www.kaggle.com/datasets/rkiattisak/student-performance-in-mathematics/data">https://www.kaggle.com/datasets/rkiattisak/student-performance-in-mathematics/data</a></p>
+<p><strong>Uraian Fitur:</strong>
+- <code>gender</code>: Merupakan jenis kelamin siswa, dengan nilai <code>male</code> (laki-laki) atau <code>female</code> (perempuan).
+- <code>race/ethnicity</code>: Menunjukkan latar belakang ras atau etnis siswa. Kategori ini dibagi menjadi lima kelompok: <code>group A</code>, <code>group B</code>, <code>group C</code>, <code>group D</code>, dan <code>group E</code>.
+- <code>parental level of education</code>: Menyatakan tingkat pendidikan tertinggi yang dicapai oleh orang tua atau wali siswa. Nilainya meliputi: <code>some high school</code>, <code>high school</code>, <code>some college</code>, <code>associate's degree</code>, <code>bachelor's degree</code>, dan <code>master's degree</code>.
+- <code>lunch</code>: Menunjukkan status subsidi makan siang siswa. Nilainya adalah <code>standard</code> (membayar penuh) atau <code>free/reduced</code> (gratis atau subsidi).
+- <code>test preparation course</code>: Menunjukkan apakah siswa telah menyelesaikan kursus persiapan ujian. Nilainya adalah <code>completed</code> atau <code>none</code>.
+- <code>math score</code>: Skor siswa dalam ujian standar mata pelajaran matematika. Nilainya berupa bilangan bulat dari 0 hingga 100.
+- <code>reading score</code>: Skor siswa dalam ujian standar mata pelajaran membaca. Nilainya berupa bilangan bulat dari 0 hingga 100.
+- <code>writing score</code>: Skor siswa dalam ujian standar mata pelajaran menulis. Nilainya berupa bilangan bulat dari 0 hingga 100.</p>
+<h3 id="exploratory-data-analysis-univariate-analysis">Exploratory data analysis - Univariate Analysis</h3>
+<h3 id="fitur-fitur-kategori">Fitur-fitur Kategori</h3>
+<h3 id="distribusi-gender">Distribusi Gender</h3>
+<table>
+<thead>
+<tr>
+<th>Gender</th>
+<th>Count</th>
+<th>Percent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Male</td>
+<td>508</td>
+<td>50.8%</td>
+</tr>
+<tr>
+<td>Female</td>
+<td>492</td>
+<td>49.2%</td>
+</tr>
+</tbody>
+</table>
+<p>Jumlah siswa laki-laki (50.8%) dan perempuan (49.2%) hampir seimbang. Hal ini menunjukkan tidak adanya bias signifikan dalam representasi gender</p>
+<h3 id="distribusi-raceethnicity">Distribusi Race/Ethnicity</h3>
+<table>
+<thead>
+<tr>
+<th>Race/Ethnicity</th>
+<th>Count</th>
+<th>Percent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Group C</td>
+<td>323</td>
+<td>32.3%</td>
+</tr>
+<tr>
+<td>Group D</td>
+<td>257</td>
+<td>25.7%</td>
+</tr>
+<tr>
+<td>Group B</td>
+<td>198</td>
+<td>19.8%</td>
+</tr>
+<tr>
+<td>Group E</td>
+<td>143</td>
+<td>14.3%</td>
+</tr>
+<tr>
+<td>Group A</td>
+<td>79</td>
+<td>7.9%</td>
+</tr>
+</tbody>
+</table>
+<p>Sebagian besar siswa berasal dari Group C (32.3%), diikuti oleh Group D (25.7%) dan Group B (19.8%). Group A dan E relatif lebih sedikit.</p>
+<h3 id="distribusi-parental-level-of-education">Distribusi Parental Level of Education</h3>
+<table>
+<thead>
+<tr>
+<th>Parental Level of Education</th>
+<th>Count</th>
+<th>Percent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Some college</td>
+<td>224</td>
+<td>22.4%</td>
+</tr>
+<tr>
+<td>High school</td>
+<td>215</td>
+<td>21.5%</td>
+</tr>
+<tr>
+<td>Associate's degree</td>
+<td>204</td>
+<td>20.4%</td>
+</tr>
+<tr>
+<td>Some high school</td>
+<td>177</td>
+<td>17.7%</td>
+</tr>
+<tr>
+<td>Bachelor's degree</td>
+<td>105</td>
+<td>10.5%</td>
+</tr>
+<tr>
+<td>Master's degree</td>
+<td>75</td>
+<td>7.5%</td>
+</tr>
+</tbody>
+</table>
+<p>Mayoritas orang tua siswa memiliki tingkat pendidikan “some college” (22.4%), diikuti oleh “high school” (21.5%) dan “associate's degree” (20.4%). Sementara itu, hanya sebagian kecil orang tua yang memiliki gelar “master’s degree” (7.5%). </p>
+<h3 id="distribusi-lunch">Distribusi Lunch</h3>
+<table>
+<thead>
+<tr>
+<th>Lunch Type</th>
+<th>Count</th>
+<th>Percent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standard</td>
+<td>660</td>
+<td>66.0%</td>
+</tr>
+<tr>
+<td>Free/Reduced</td>
+<td>340</td>
+<td>34.0%</td>
+</tr>
+</tbody>
+</table>
+<p>Sebanyak 66.0% siswa mendapatkan makan siang standar, sedangkan 34.0% menerima makan siang gratis atau diskon.</p>
+<h3 id="distribusi-test-preparation-course">Distribusi Test Preparation Course</h3>
+<table>
+<thead>
+<tr>
+<th>Test Preparation Course</th>
+<th>Count</th>
+<th>Percent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>656</td>
+<td>65.6%</td>
+</tr>
+<tr>
+<td>Completed</td>
+<td>344</td>
+<td>34.4%</td>
+</tr>
+</tbody>
+</table>
+<p>Sebanyak 65.6% siswa tidak mengikuti kursus persiapan ujian, sedangkan 34.4% mengikuti.</p>
+<p><strong>Kesimpulan</strong></p>
+<p>Berdasarkan hasil eksplorasi data (EDA) terhadap variabel kategorikal, dapat disimpulkan bahwa distribusi siswa berdasarkan gender cukup seimbang, dengan proporsi laki-laki sebesar 50.8% dan perempuan 49.2%. Dari sisi latar belakang etnis, mayoritas siswa berasal dari group C (32.3%), diikuti oleh group D (25.7%) dan group B (19.8%), sementara group A dan E masing-masing hanya menyumbang 7.9% dan 14.3%. Latar belakang pendidikan orang tua menunjukkan bahwa sebagian besar berasal dari keluarga dengan tingkat pendidikan menengah, seperti “some college” (22.4%) dan “high school” (21.5%). Hanya sedikit orang tua yang memiliki gelar magister (7.5%), yang menunjukkan bahwa sebagian besar siswa mungkin tidak mendapatkan dukungan akademik dari orang tua dengan pendidikan tinggi.</p>
+<p>Dari sisi ekonomi, sebanyak 66.0% siswa mendapatkan makan siang standar, sementara 34.0% menerima makan siang gratis atau bersubsidi, yang sering kali menjadi indikator kondisi sosial-ekonomi yang lebih rendah. Selain itu, hanya 34.4% siswa yang telah menyelesaikan kursus persiapan ujian, sedangkan 65.6% lainnya tidak mengikuti kursus tersebut. Hal ini menunjukkan bahwa sebagian besar siswa mungkin menghadapi keterbatasan dalam akses terhadap persiapan akademik tambahan.</p>
+<p>Secara keseluruhan, hasil ini memberikan gambaran bahwa faktor sosial-ekonomi, latar belakang pendidikan orang tua, serta akses terhadap fasilitas belajar tambahan dapat menjadi faktor penting yang memengaruhi performa akademik siswa. Analisis lanjutan sangat dianjurkan untuk melihat bagaimana variabel-variabel ini berkorelasi dengan hasil tes akademik seperti nilai matematika, membaca, dan menulis, guna memperoleh pemahaman yang lebih mendalam dan komprehensif.</p>
+<h3 id="fitur-fitur-numerikal">Fitur-fitur Numerikal</h3>
+<p><img alt="EDA Unvariate" src="https://raw.githubusercontent.com/minggo-commits/student-performance-prediction/main/EDA%20Unvariate%20Numerical.png" /></p>
+<p>Berdasarkan hasil eksplorasi data univariat terhadap fitur numerik yaitu math score, reading score, dan writing score, dapat disimpulkan bahwa distribusi ketiga skor tersebut cenderung mengikuti pola distribusi normal, meskipun terlihat sedikit condong ke kiri (left-skewed), khususnya pada skor matematika dan menulis. Sebagian besar nilai berada dalam kisaran 60 hingga 80, yang menunjukkan bahwa mayoritas siswa memiliki performa akademik yang cukup baik. Skor membaca menunjukkan distribusi yang paling simetris, serta memiliki konsentrasi nilai tinggi lebih banyak dibanding dua skor lainnya, mengindikasikan bahwa kemampuan membaca siswa secara umum lebih unggul. Sementara itu, skor matematika memiliki beberapa nilai rendah yang secara realita tidak dapat dianggap sebagai outlier, namun tidak terlalu signifikan. Secara keseluruhan, ketiga skor ini menunjukkan distribusi yang baik dan stabil.</p>
+<p><strong>Kesimpulan</strong></p>
+<ul>
+<li>Histogram pertama menampilkan distribusi nilai ujian matematika (math score). Terlihat bahwa distribusi nilai cenderung unimodal dan mendekati distribusi normal, meskipun terdapat sedikit skewness ke kiri (ekor distribusi memanjang ke arah nilai yang lebih rendah). Sebagian besar siswa memperoleh nilai antara 60 hingga 80, dengan puncak frekuensi berada di sekitar nilai 65-70. Terdapat beberapa siswa dengan nilai yang sangat rendah (di bawah 40) dan juga beberapa siswa dengan nilai yang sangat tinggi (di atas 90), namun jumlahnya relatif lebih sedikit dibandingkan dengan kelompok nilai tengah.</li>
+<li>Histogram kedua menyajikan distribusi nilai ujian membaca (reading score). Distribusi nilai membaca tampak lebih mendekati distribusi normal dibandingkan dengan nilai matematika. Puncak frekuensi berada di sekitar nilai 70-80, dan sebagian besar siswa memperoleh nilai antara 60 hingga 90. Sebaran nilai membaca juga terlihat sedikit lebih lebar dibandingkan dengan nilai matematika, mengindikasikan variasi performa membaca antar siswa yang mungkin lebih besar. Jumlah siswa dengan nilai sangat rendah (di bawah 40) dan sangat tinggi (di atas 95) juga relatif sedikit.</li>
+<li>Histogram ketiga menggambarkan distribusi nilai ujian menulis (writing score). Distribusi nilai menulis juga terlihat unimodal dengan puncak frekuensi di sekitar nilai 65-75. Sebagian besar siswa memperoleh nilai antara 55 hingga 85. Distribusi nilai menulis menunjukkan skewness negatif yang lebih jelas dibandingkan dengan nilai matematika, dengan ekor distribusi yang lebih panjang ke arah nilai yang lebih rendah. Ini mengindikasikan bahwa terdapat lebih banyak siswa yang memperoleh nilai di bawah rata-rata dibandingkan dengan siswa yang memperoleh nilai jauh di atas rata-rata.</li>
+</ul>
+<h3 id="exploratory-data-analysis-multivariate-analysis">Exploratory data analysis - Multivariate Analysis</h3>
+<h3 id="fitur-fitur-kategorical-terhadap-target">Fitur-fitur Kategorical Terhadap Target</h3>
+<p><img alt="EDA Multivariate Kategorical" src="https://raw.githubusercontent.com/minggo-commits/student-performance-prediction/main/EDA%20Multivariate%20Kategorical%20Gender.png" />
+Siswa perempuan memiliki skor rata-rata sedikit lebih tinggi (±70) dibandingkan siswa laki-laki (±68). Karena selisihnya kecil, maka fitur ini memiliki pengaruh yang rendah terhadap rata-rata skor.</p>
+<p><img alt="EDA Multivariate Kategorical" src="https://raw.githubusercontent.com/minggo-commits/student-performance-prediction/main/EDA%20Multivariate%20Kategorical%20Lunch.png" />
+Siswa yang mendapatkan makan siang standar memiliki skor rata-rata lebih tinggi (±72) dibandingkan dengan siswa yang mendapatkan makan siang gratis (±64). Hal ini menunjukkan bahwa status makan siang memiliki pengaruh yang cukup kuat terhadap rata-rata skor.</p>
+<p><img alt="EDA Multivariate Kategorical" src="https://raw.githubusercontent.com/minggo-commits/student-performance-prediction/main/EDA%20Multivariate%20Kategorical%20Pendidikan%20Orangtua.png" />
+Siswa dengan orang tua berpendidikan tinggi seperti bachelor’s degree dan master’s degree cenderung memiliki rata-rata skor lebih tinggi (±71), sedangkan yang berasal dari orang tua dengan pendidikan some high school memiliki rata-rata skor lebih rendah (±65). Meskipun terlihat ada tren, perbedaan antar kelompok tidak terlalu tajam, sehingga fitur ini tidak terlalu berpengaruh terhadap skor.</p>
+<p><img alt="EDA Multivariate Kategorical" src="https://raw.githubusercontent.com/minggo-commits/student-performance-prediction/main/EDA%20Multivariate%20Kategorical%20Persiapan%20Tes.png" />
+Siswa yang menyelesaikan kursus persiapan tes memiliki skor rata-rata lebih tinggi (±74) dibandingkan yang tidak mengikuti kursus (±67). Hal ini menunjukkan bahwa kursus persiapan tes memiliki pengaruh yang cukup kuat terhadap peningkatan skor rata-rata.</p>
+<p><img alt="EDA Multivariate Kategorical" src="https://raw.githubusercontent.com/minggo-commits/student-performance-prediction/main/EDA%20Multivariate%20Kategorical%20Ras.png" />
+Kelompok E memiliki skor rata-rata tertinggi (±76), sementara kelompok lain berkisar antara 67 hingga 71. Perbedaan ini menunjukkan adanya variasi, namun tidak konsisten meningkat atau menurun antar kelompok, sehingga fitur ini memiliki pengaruh yang rendah terhadap skor.</p>
+<p><strong>Kesimpulan</strong></p>
+<p>Hasil analisis menunjukkan bahwa variabel kategorikal seperti pendidikan orangtua,jenis kelamin, jenis makan siang, tingkat pendidikan orangtua, partisipasi kursus, dan ras sebenarnya tidak memberikan dampak yang signifikan terhadap nilai rata-rata skor siswa. Hal ini ditunjukkan dengan nilai rata rata skor untuk tiap-tiap variabel yang hanya berada di kisaran 60-75.</p>
+<h3 id="fitur-fitur-numerical-terhadap-target">Fitur-fitur Numerical Terhadap Target</h3>
+<p><img alt="EDA Multivariate Numerical" src="https://raw.githubusercontent.com/minggo-commits/student-performance-prediction/main/EDA%20Multivariate%20Numerical.png" />
+Fitur numerik menunjukkan hubungan linear yang kuat satu sama lain, dengan korelasi tertinggi antara reading score dan writing score. Average score sangat bergantung secara proporsional pada ketiga skor asli, dan hubungan linear ini memvalidasi penggunaannya sebagai metrik gabungan. </p>
+<p><strong>Kesimpulan</strong></p>
+<p>Analisis pair plot ini dengan jelas menunjukkan hubungan linear positif yang sangat kuat antara nilai matematika, membaca, dan menulis dengan rata-rata skor siswa. Selain itu, terdapat korelasi yang tinggi di antara ketiga nilai ujian itu sendiri. Temuan ini menggarisbawahi pentingnya ketiga mata pelajaran ini dalam menentukan performa akademik keseluruhan siswa. Model prediksi rata-rata skor kemungkinan akan sangat akurat jika menggunakan ketiga nilai ujian ini sebagai fitur. Tidak terlihat adanya pola non-linear yang signifikan atau outlier ekstrem yang perlu perhatian khusus dari visualisasi ini.</p>
+<h2 id="data-preparation">Data Preparation</h2>
+<ul>
+<li>
+<p>Karena dataset menunjukkan kondisi yang bersih tanpa adanya nilai yang hilang dan tidak terdapat outlier signifikan yang dapat berdampak negatif, maka tidak dilakukan pengurangan data.</p>
+</li>
+<li>
+<p>Feature Engineering: Membuat fitur baru berupa rata rata score yang didapatkan dari hasil math score + reading score + writing score dibagi 3, hal tersebut dilakukan mengingat belum adanya target pada dataset, sehingga perlu dilakukan feature engineering untuk menghasilkan fitur baru yang relevan.</p>
+</li>
+<li>
+<p>Encoding fitur kategori: Feature encoding kategori seperti OneHotEncoder penting dilakukan karena sebagian besar algoritma machine learning tidak dapat menangani data kategorikal secara langsung. Mereka memerlukan input berupa angka, sedangkan beberapa fitur pada dataset tersebut berbentuk kategori, fitur fitur tersebut adalah gender, ras, level pendidikan orangtua, tipe makan siang, dan tes persiapan.</p>
+</li>
+<li>
+<p>Reduksi dimensi dengan PCA: Reduksi dimensi dengan PCA (Principal Component Analysis) diperlukan karena fitur math score, reading score, dan writing score menunjukkan korelasi tinggi satu sama lain, yang berarti terdapat redundansi informasi. PCA membantu menyederhanakan fitur-fitur tersebut menjadi beberapa komponen utama yang tetap mempertahankan sebagian besar informasi, sehingga dapat meningkatkan efisiensi model, mengurangi risiko overfitting, dan mempermudah visualisasi data. Selain itu, PCA juga membantu menghilangkan noise dan menjaga struktur data dalam dimensi yang lebih rendah. Oleh karena itu fitur math score, reading score, dan writing score dimasukkan kedalam proses PCA menjadi sebuah fitur yang bernama student performance.</p>
+</li>
+<li>
+<p>Train dan test split: Train-test split perlu dilakukan untuk mengevaluasi kinerja model secara objektif. Dengan membagi data menjadi data latih (train) dan data uji (test), kita dapat melatih model pada satu bagian data dan mengujinya pada data yang belum pernah dilihat sebelumnya. Hal ini penting untuk menilai kemampuan generalisasi model terhadap data baru dan mencegah overfitting, yaitu kondisi di mana model terlalu baik dalam menghafal data latih namun buruk dalam memprediksi data baru. Dalam kasus ini, data dibagi 90% untuk pelatihan dan 10% untuk pengujian, memberikan cukup data untuk pembelajaran sambil tetap menyisakan data yang representatif untuk evaluasi.</p>
+</li>
+<li>
+<p>Standarisasi: hal tersebut perlu dilakukan untuk menyamakan skala fitur numerik agar model machine learning dapat bekerja secara optimal. Fitur seperti student performance mungkin memiliki rentang nilai yang berbeda dibanding fitur lain, dan ini bisa menyebabkan model lebih condong atau berat sebelah terhadap fitur dengan nilai besar. Dengan standarisasi menggunakan StandardScaler, data diubah agar memiliki rata-rata 0 dan standar deviasi 1, sehingga semua fitur berada dalam skala yang seimbang. Ini sangat penting terutama untuk algoritma yang sensitif terhadap skala data seperti KNN, SVM, dan regresi linier. Hasil standarisasi menunjukkan bahwa data telah terpusat di sekitar nol dengan penyebaran standar yang seragam, memastikan proses pelatihan model menjadi lebih stabil dan akurat.</p>
+</li>
+</ul>
+<h2 id="modeling">Modeling</h2>
+<p>Pada tahap ini dilakukan pengembangan model machine learning untuk memprediksi skor rata-rata siswa berdasarkan fitur-fitur input yang telah diproses sebelumnya. Tiga algoritma regresi digunakan, yaitu K-Nearest Neighbors (KNN), Random Forest Regressor, dan AdaBoost Regressor.</p>
+<ul>
+<li><strong>K-Nearest Neighbors (KNN)</strong></li>
+</ul>
+<p>K-Nearest Neighbors (KNN) adalah algoritma non-parametrik yang bekerja dengan cara membandingkan jarak antara data uji dengan seluruh data latih, lalu memilih k tetangga terdekat untuk melakukan prediksi. Nilai prediksi untuk regresi ditentukan dari rata-rata nilai target dari k tetangga terdekat tersebut. Model KNN digunakan dengan parameter n_neighbors=10 dan untuk parameter lainnya bernilai default. Kelebihan KNN adalah sederhana dan tidak membutuhkan proses pelatihan yang kompleks. Namun, KNN sangat sensitif terhadap skala fitur dan kurang efisien pada dataset besar. Model ini menghasilkan MSE (mean squared error) sebesar 0.0137 (train) dan 0.0113 (test).</p>
+<ul>
+<li><strong>Random Forest</strong></li>
+</ul>
+<p>Random Forest merupakan algoritma ensemble learning yang menggabungkan banyak pohon keputusan (decision trees) untuk meningkatkan akurasi prediksi. Setiap pohon dilatih pada subset data yang dipilih secara acak (bootstrap), dan hasil prediksi akhir diambil rata-rata dari semua pohon. Random Forest digunakan dengan n_estimators=50, max_depth=16, random_state=55, n_jobs=-1 serta parameter lain yang bernilai default. Algoritma ini mampu menangani data dengan fitur non-linear dan tidak sensitif terhadap skala fitur. Namun random forest memerlukan sumber daya komputasi besar dan kurang interpretatif. Hasil evaluasi menunjukkan performa terbaik dibanding model lain, dengan MSE sangat kecil yaitu 0.000009 (train) dan 0.000008 (test). Ini menunjukkan model sangat akurat dalam menangkap pola data.</p>
+<ul>
+<li><strong>AdaBoost Regressor</strong></li>
+</ul>
+<p>AdaBoost (Adaptive Boosting) bekerja dengan membentuk model ensemble dari sejumlah weak learners, biasanya decision tree berukuran kecil. Setiap model baru dibangun dengan fokus pada data yang salah diklasifikasikan oleh model sebelumnya. Hasil akhir prediksi merupakan kombinasi tertimbang dari seluruh model. AdaBoost digunakan dengan learning_rate=0.05 dan random_state=55 serta parameter lainnya yang bernilai default. Algoritma ini meningkatkan akurasi model dengan menggabungkan banyak prediktor sederhana, akan tetapi rentan terhadap data outlier dan noise. Hasil yang diperoleh cukup baik, dengan MSE 0.0024 (train) dan 0.0029 (test), namun masih kalah dari Random Forest.</p>
+<p><strong>Kesimpulan</strong></p>
+<p>Berdasarkan hasil evaluasi MSE pada data latih dan uji, Random Forest dipilih sebagai model terbaik karena menghasilkan error paling rendah di antara semua model yang diuji. Selain itu, model ini juga lebih stabil dan mampu menangani kompleksitas data tanpa mengalami overfitting.</p>
+<h2 id="evaluation">Evaluation</h2>
+<p>Karena proyek ini merupakan kasus regresi, maka metrik evaluasi yang digunakan adalah Mean Squared Error (MSE). MSE mengukur rata-rata kuadrat selisih antara nilai aktual (y_true) dan nilai prediksi (y_pred). Semakin kecil nilai MSE, semakin akurat model dalam melakukan prediksi. Metrik ini cocok digunakan karena memberikan penalti yang lebih besar pada kesalahan prediksi yang jauh dari nilai sebenarnya. MSE dihitung menggunakan rumus berikut:</p>
+<p><img alt="MSE Formula" src="https://cdn.analyticsvidhya.com/wp-content/uploads/2024/07/image-37.png" /></p>
+<p>Cara kerja MSE adalah dengan menghitung selisih antara nilai aktual dan prediksi untuk setiap data, lalu mengkuadratkan selisih tersebut agar tidak ada nilai negatif dan memberi penalti lebih besar terhadap kesalahan prediksi yang jauh. Kemudian seluruh kuadrat error dijumlahkan dan dirata-ratakan.</p>
+<p>MSE efektif digunakan dalam regresi karena memberikan pemahaman seberapa besar rata-rata kesalahan model dalam satuan kuadrat dari target. Nilai MSE yang lebih rendah menunjukkan model yang lebih baik dalam memprediksi target.</p>
+<p><strong>Hasil Evaluasi Model</strong></p>
+<p>Berdasarkan hasil evaluasi terhadap tiga model, diperoleh hasil sebagai berikut:
+| Model        | Train MSE | Test MSE |
+|--------------|-----------|----------|
+| KNN          | 0.0137    | 0.0113   |
+| RandomForest | 0.000009  | 0.000008 |
+| Boosting     | 0.0024    | 0.0029   |</p>
+<p>Dari tabel di atas, terlihat bahwa Random Forest Regressor memiliki performa terbaik dengan nilai MSE terkecil baik pada data latih maupun data uji. Hal ini menunjukkan bahwa model ini mampu melakukan generalisasi dengan sangat baik, serta minim terhadap overfitting.</p>
+<p><strong>Evaluasi Prediksi</strong></p>
+<p>Untuk melihat kualitas prediksi lebih lanjut, dilakukan perbandingan antara nilai aktual (y_true) dan hasil prediksi dari ketiga model:
+| y_true | KNN  | RandomForest | Boosting |
+|--------|------|--------------|----------|
+| 56.3   | 60.3 | 56.3         | 56.7     |
+| 92.0   | 87.2 | 92.0         | 93.2     |
+| 72.0   | 73.5 | 72.0         | 70.4     |
+| 63.3   | 67.8 | 63.3         | 63.8     |</p>
+<p>Dari tabel tersebut, dapat dilihat bahwa hasil prediksi Random Forest paling konsisten mendekati nilai sebenarnya dibanding model lainnya. Hal ini menguatkan alasan pemilihan Random Forest sebagai model akhir.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.expand"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
