@@ -26,19 +26,14 @@ body {
   overflow-x: hidden;
 }
 
-body::before {
-  content: '';
+#code-animation {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: -1;
-  opacity: 0.03;
-  background-image: 
-    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle cx="50" cy="50" r="20" fill="none" stroke="black" stroke-width="2"/><circle cx="50" cy="50" r="10" fill="black"/><circle cx="150" cy="50" r="20" fill="none" stroke="black" stroke-width="2"/><circle cx="150" cy="50" r="10" fill="black"/><circle cx="100" cy="100" r="30" fill="none" stroke="black" stroke-width="2"/><circle cx="100" cy="100" r="15" fill="black"/><line x1="70" y1="50" x2="100" y2="100" stroke="black" stroke-width="2"/><line x1="130" y1="50" x2="100" y2="100" stroke="black" stroke-width="2"/><circle cx="50" cy="150" r="20" fill="none" stroke="black" stroke-width="2"/><circle cx="50" cy="150" r="10" fill="black"/><circle cx="150" cy="150" r="20" fill="none" stroke="black" stroke-width="2"/><circle cx="150" cy="150" r="10" fill="black"/><line x1="100" y1="100" x2="50" y2="150" stroke="black" stroke-width="2"/><line x1="100" y1="100" x2="150" y2="150" stroke="black" stroke-width="2"/></svg>');
-  background-size: 400px 400px;
-  background-repeat: repeat;
+  opacity: 0.05;
 }
 
 @keyframes gradientShift {
