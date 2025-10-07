@@ -1,1 +1,0 @@
-# minggo-commits.github.io
